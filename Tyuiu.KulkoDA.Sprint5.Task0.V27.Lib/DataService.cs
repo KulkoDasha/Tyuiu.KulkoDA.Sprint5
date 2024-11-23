@@ -8,7 +8,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task0.V27.Lib
         {
             string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
             double y = Math.Pow((x - 1), (3*x+1));
-            File.WriteAllText(path, Convert.ToString(x));
+            File.WriteAllText(path, Convert.ToString(y));
             return path;
         }
     }
