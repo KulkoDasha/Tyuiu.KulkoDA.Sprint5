@@ -18,7 +18,8 @@ namespace Tyuiu.KulkoDA.Sprint5.Task1.V4.Lib
             for(int i = startValue; i<=stopValue;i++)
             {
                 y = Math.Round((Math.Cos(i)/(i+1)-Math.Cos(i)*1.3+3*i),2);
-                
+                if(i+1==0)
+                    { y = 0; }
                 str = Convert.ToString(y);
                 if (i!=stopValue)
                 {
