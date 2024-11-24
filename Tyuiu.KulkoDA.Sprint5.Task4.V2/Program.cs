@@ -22,7 +22,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task4.V2
             
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("*ИСХОДНЫЕ ДАННЫЕ:                                                         *");
-            string path = Path.Combine(Path.GetTempPath(), "InPutDataFileTask4V2.txt");
+            string path = @"C:\DataSprint5\InPutDataFileTask4V2.txt";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("Данные находятся в файле: " + path);
             double res = ds.LoadFromDataFile(path);
