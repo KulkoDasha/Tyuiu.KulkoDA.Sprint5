@@ -9,7 +9,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task4.V2.Lib
             string srt = File.ReadAllText(path);
             string s = srt.Replace(".",",");
             double x = Convert.ToDouble(s);
-            double res = (Math.Cos(x)+3*x)/0.25*x+4-2.1*x;
+            double res = (Math.Cos(x)+3*x)/(0.25*x)+4-2.1*x;
             return Math.Round(res,3);
         }
     }
