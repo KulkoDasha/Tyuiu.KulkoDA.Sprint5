@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Runtime.CompilerServices;
 using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.KulkoDA.Sprint5.Task5.V2.Lib
 {
@@ -6,23 +7,29 @@ namespace Tyuiu.KulkoDA.Sprint5.Task5.V2.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            double f;
-            double res = 0;
+            double sum = 0;
             int count = 0;
+            int f;
+            
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
                 while((line = reader.ReadLine()) != null)
                 {
-                    f = Convert.ToDouble(line);
-                    if(f>0)
+                    line = line.Replace(",", "");
+                    int[] a = line.Split(' ').Select(int.Parse).ToArray();
+                    for (int i = 0; i < a.Length; i++)
                     {
-                        res += f;
-                        count++;
+                        if (Convert.ToInt32(a[i])>0)
+                        {
+                            sum += Convert.ToInt32(a[i]);
+                            count++;
+                        }
                     }
                 }
             }
-            return Math.Round((res/count),3);
+            return Math.Round((sum/count),3);
         }
     }
 }
+    
