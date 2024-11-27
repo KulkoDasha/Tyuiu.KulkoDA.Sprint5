@@ -25,7 +25,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("*ИСХОДНЫЕ ДАННЫЕ:                                                         *");
             string path = @"C:\DataSprint5\InPutDataFileTask7V10.txt";
-            string Savepath = @"C:\DataSprint5\OutPutDataFileTask7V10.txt";
+            string Savepath = "";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("Данные находятся в файле: " + path);
             Savepath = ds.LoadDataAndSave(path);
