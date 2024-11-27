@@ -7,7 +7,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            string Savepath = @"C:\DataSprint5\OutPutDataFileTask7V10.txt";
+            string Savepath = Path.Combine(@"C:\DataSprint5" , "OutPutDataFileTask7V10.txt");
             FileInfo fileInfo = new FileInfo(Savepath);
             if (fileInfo.Exists )
             {
