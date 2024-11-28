@@ -28,8 +28,6 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
                             str += line.Replace(c, char.ToLower(c));
                         }
                         
-                        else
-                            str += c;
                     }
                     File.AppendAllText(Savepath, str);
                 }
