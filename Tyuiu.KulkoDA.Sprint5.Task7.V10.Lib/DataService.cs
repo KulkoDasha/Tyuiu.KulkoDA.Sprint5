@@ -29,8 +29,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
                             {
                                 line = line.Replace(line[i], line.ToLower()[i]);
                             }
-                            else
-                                line = line.Replace(line[i], line.ToUpper()[i]); ;
+                            
                         }
                     }
                     
