@@ -21,13 +21,17 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
 
                 while ((line = reader.ReadLine()) != null)
                 {
-                    for(int i=0;i<line.Length;i++)
+                    foreach(char ch in line)
                     {
-                        if (line[i] == line.ToUpper()[i])
+                        for (int i = 0; i < line.Length; i++)
                         {
-                            line = line.Replace(line[i], line.ToLower()[i]);
+                            if ((line[i] == line.ToUpper()[i])&((int)ch >= 97 && (int)ch <= 122))
+                            {
+                                line = line.Replace(line[i], line.ToLower()[i]);
+                            }
                         }
                     }
+                    
                     File.AppendAllText(Savepath, line);
                 }
             }
