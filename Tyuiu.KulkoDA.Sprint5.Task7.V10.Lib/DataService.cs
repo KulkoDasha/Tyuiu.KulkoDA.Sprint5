@@ -7,7 +7,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            string str = "";
+            
             string Savepath = Path.Combine(Path.GetTempPath(), "OutPutDataFileTask7V10.txt");
             FileInfo fileInfo = new FileInfo(Savepath);
             if (fileInfo.Exists )
@@ -21,15 +21,17 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
 
                 while ((line = reader.ReadLine()) != null)
                 {
-                    for (int i = 0; i<line.Length;i++)
+                    for(int i=0;i<line.Length;i++)
                     {
-                        str += line[i];
-
+                        if (line[i] == line.ToUpper()[i])
+                        {
+                            line = line.Replace(line[i], line.ToLower()[i]);
+                        }
                     }
-                    File.AppendAllText(Savepath, str);
+                    File.AppendAllText(Savepath, line);
                 }
             }
-
+            
             return Savepath;
         }
     }
