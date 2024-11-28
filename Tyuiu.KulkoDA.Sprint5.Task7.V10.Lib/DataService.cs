@@ -24,6 +24,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
                     for (int i = 0; i<line.Length;i++)
                     {
                         str += line[i];
+
                     }
                     File.AppendAllText(Savepath, str);
                 }
