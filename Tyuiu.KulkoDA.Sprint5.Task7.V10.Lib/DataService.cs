@@ -30,7 +30,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
                         else
                             str += c;
                     }
-                    File.AppendAllText(Savepath, line);
+                    File.AppendAllText(Savepath, str);
                 }
             }
 
