@@ -29,7 +29,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
                 }
               
             }
-            File.AppendAllText(Savepath, str);
+            File.AppendAllText(Savepath, newstr);
             return Savepath;
         }
     }
