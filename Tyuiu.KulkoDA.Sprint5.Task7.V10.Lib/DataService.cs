@@ -29,7 +29,9 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
                             str += char.ToLower(ch);
                         }
                         else
+                        {
                             str += ch;
+                        }
                     }
                     
                     File.AppendAllText(Savepath, str);
