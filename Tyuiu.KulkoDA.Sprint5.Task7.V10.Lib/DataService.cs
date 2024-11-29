@@ -19,7 +19,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
             
             foreach(char s in str)
             {
-                if ((s >= 97 && s <= 122) && (char.IsUpper(s)))
+                if ((s >= 'A' && s <= 'Z') && (char.IsUpper(s)))
                 {
                     newstr += char.ToLower(s);
                 }
