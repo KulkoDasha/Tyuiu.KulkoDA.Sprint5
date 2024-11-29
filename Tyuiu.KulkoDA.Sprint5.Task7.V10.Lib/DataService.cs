@@ -14,6 +14,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
             {
                 File.Delete(Savepath);
             }
+            string f =File.ReadAllText(path);
             string str = "";
             using (StreamReader reader = new StreamReader(path))
             {
@@ -21,7 +22,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
 
                 while ((line = reader.ReadLine()) != null)
                 {
-                    foreach(char ch in line)
+                    foreach(char ch in f)
                     {
                         if ((ch >= 97 && ch <= 122) && (char.IsUpper(ch)))
                         {
