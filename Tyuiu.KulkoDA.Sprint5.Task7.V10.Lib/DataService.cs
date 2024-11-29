@@ -14,25 +14,22 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
             {
                 File.Delete(Savepath);
             }
-            string f =File.ReadAllText(path);
-            string str = "";
+            string str =File.ReadAllText(path);
+            string newstr = "";
             
-            foreach(char ch in f)
+            foreach(char s in str)
             {
-                if ((ch >= 97 && ch <= 122) && (char.IsUpper(ch)))
+                if ((s >= 97 && s <= 122) && (char.IsUpper(s)))
                 {
-                    str += char.ToLower(ch);
+                    newstr += char.ToLower(s);
                 }
                 else
                 {
-                    str += ch;
+                    newstr += s;
                 }
-                    
-                    
-             File.AppendAllText(Savepath, str);
-                
+              
             }
-            
+            File.AppendAllText(Savepath, str);
             return Savepath;
         }
     }
