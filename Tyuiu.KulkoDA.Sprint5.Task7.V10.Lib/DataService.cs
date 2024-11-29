@@ -23,7 +23,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
                 {
                     foreach(char ch in line)
                     {
-                        if (((int)ch >= 97 && (int)ch <= 122) && (char.IsUpper(ch)))
+                        if ((ch >= 97 && ch <= 122) && (char.IsUpper(ch)))
                         {
                             str += char.ToLower(ch);
                         }
