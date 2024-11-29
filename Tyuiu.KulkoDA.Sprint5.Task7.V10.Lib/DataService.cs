@@ -16,26 +16,21 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
             }
             string f =File.ReadAllText(path);
             string str = "";
-            using (StreamReader reader = new StreamReader(path))
+            
+            foreach(char ch in f)
             {
-                string line;
-
-                while ((line = reader.ReadLine()) != null)
+                if ((ch >= 97 && ch <= 122) && (char.IsUpper(ch)))
                 {
-                    foreach(char ch in f)
-                    {
-                        if ((ch >= 97 && ch <= 122) && (char.IsUpper(ch)))
-                        {
-                            str += char.ToLower(ch);
-                        }
-                        else
-                        {
-                            str += ch;
-                        }
-                    }
-                    
-                    File.AppendAllText(Savepath, str);
+                    str += char.ToLower(ch);
                 }
+                else
+                {
+                    str += ch;
+                }
+                    
+                    
+             File.AppendAllText(Savepath, str);
+                
             }
             
             return Savepath;
