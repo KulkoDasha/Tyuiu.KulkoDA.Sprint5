@@ -15,13 +15,14 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
                 File.Delete(Savepath);
             }
             string str = "";
+            string f = File.ReadAllText(Savepath);
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
 
                 while ((line = reader.ReadLine()) != null)
                 {
-                    foreach(char ch in line)
+                    foreach(char ch in f)
                     {
                         if (((int)ch >= 97 && (int)ch <= 122) && (char.IsUpper(ch)))
                         {
