@@ -25,7 +25,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
                     {
                         if (((int)ch >= 97 && (int)ch <= 122) && (char.IsUpper(ch)))
                         {
-                            str += char.IsLower(ch);
+                            str += char.ToLower(ch);
                         }
                         else
                             str += ch;
