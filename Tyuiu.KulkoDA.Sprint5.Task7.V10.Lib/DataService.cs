@@ -14,7 +14,7 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
             {
                 File.Delete(Savepath);
             }
-            
+            string str = "";
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
@@ -23,14 +23,12 @@ namespace Tyuiu.KulkoDA.Sprint5.Task7.V10.Lib
                 {
                     foreach(char ch in line)
                     {
-                        for (int i = 0; i < line.Length; i++)
+                        if (((int)ch >= 97 && (int)ch <= 122) && (char.IsUpper(ch)))
                         {
-                            if (line[i] == line.ToUpper()[i]) 
-                            {
-                                line = line.Replace(line[i], line.ToLower()[i]);
-                            }
-                            
+                            str += char.IsLower(ch);
                         }
+                        else
+                            str += ch;
                     }
                     
                     File.AppendAllText(Savepath, line);
